@@ -17,7 +17,7 @@ CREATE TABLE Proveedores (
 CREATE TABLE Concesion_Credito (
     id_credito INT AUTO_INCREMENT PRIMARY KEY,
     id_proveedor INT,
-    plazo_credito ENUM('8 días', '15 días', '30 días', 'Otro') NOT NULL,
+    plazo_credito ENUM('8 dÃ­as', '15 dÃ­as', '30 dÃ­as', 'Otro') NOT NULL,
     otro_plazo VARCHAR(50),
     FOREIGN KEY (id_proveedor) REFERENCES Proveedores(id_proveedor) ON DELETE CASCADE
 );
@@ -36,12 +36,12 @@ VALUES
 
 INSERT INTO Concesion_Credito (id_proveedor, plazo_credito, otro_plazo)
 VALUES 
-(1, '30 días', NULL),
-(2, 'Otro', '45 días');
+(1, '30 dÃ­as', NULL),
+(2, 'Otro', '45 dÃ­as');
 
 INSERT INTO Productos_Servicios (id_proveedor, descripcion)
 VALUES 
 (1, 'Servidores de alto rendimiento para data centers'),
 (1, 'Licencias de software empresarial'),
-(2, 'Suministros tecnológicos para oficinas'),
-(2, 'Mantenimiento de equipos de cómputo');
+(2, 'Suministros tecnolÃ³gicos para oficinas'),
+(2, 'Mantenimiento de equipos de cÃ³mputo');
